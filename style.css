@@ -1,0 +1,91 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    position: relative;
+}
+
+.outer {
+
+    position: relative;
+    width: 30vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 50%);
+    padding: 6vh 3vw;
+    
+    animation: getLow;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 25%, 100% 25%, 0 40%);
+
+}
+
+.flag {
+    position: absolute;
+    background: rgba(0, 0, 0, 50%);
+    width: 30vw;
+    height: 100px;
+    top: 34.5vh;
+    clip-path: polygon(50% 0%, 100% 70%, 100% 95%, 50% 25%, 0 95%, 0 70%);  
+    
+    animation: flag;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+
+.flag2 {
+    position: absolute;
+    background: rgba(0, 0, 0, 50%);
+    width: 30vw;
+    height: 100px;
+    top: 38.7vh;
+    clip-path: polygon(50% 0%, 100% 70%, 100% 95%, 50% 25%, 0 95%, 0 70%); 
+
+    animation: flag;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+    animation-timing-function: ease; 
+}
+.title {
+    margin: 0;
+    padding: 6px;
+    clip-path: polygon(0 0, 98% 0%, 85% 100%, 0% 100%);
+    border: 4px solid white;
+}
+
+.text {
+    text-align: left;
+}
+
+@keyframes getLow {
+    0% {
+        padding: 3vh 3vw;   
+        clip-path: polygon(0 0, 100% 0, 100% 20%, 0 10%, 100% 10%, 0 20%);
+    }
+
+    100% {
+        padding: 6vh 3vw;
+        clip-path: polygon(0 0, 100% 0, 100% 40%, 0 25%, 100% 25%, 0 40%);
+    }
+}
+
+@keyframes flag {
+    0% {
+        background: rgba(0, 0, 0, 0%);
+    }
+    
+    100% {
+        background: rgba(0, 0, 0, 50%);
+    }
+}
